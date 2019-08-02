@@ -1,0 +1,14 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, rgb(73, 241, 116), rgb(115, 165, 247));
+    color: rgba(000, 000, 000, 0.6);
+}
+h1 {
+    font-size: 4em;
+}
+#wrapper {
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 150px;
+}
