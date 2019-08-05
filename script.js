@@ -30,22 +30,22 @@ secondary.addEventListener("input", function(){
 
 //FUNCTIONS =========================================================================================
 //Builds the primary part of the rgba declaration
-function buildPrimary() {
+const buildPrimary = () => {
     let color = `rgb(${primaryColorPicked.r}, ${primaryColorPicked.g}, ${primaryColorPicked.b})`;
     return color;
 }
 //Builds the secondary part of the rgba declaration
-function buildSecondary() {
+const buildSecondary = () => {
     let color = `rgb(${secondaryColorPicked.r}, ${secondaryColorPicked.g}, ${secondaryColorPicked.b})`;
     return color;
 }
 //Builds the entire rgba declaration using buildPrimary() and buildSecondary()
-function buildRgbColor() {
+const buildRgbColor = () => {
     let pri = `linear-gradient(to right, ${buildPrimary()}, ${buildSecondary()})`;
     return pri;
 }
 //Changes the style attribute of body to change the color, alse updates inner text of the h4 to display current values
-function changeBackgroundColor() {
+const changeBackgroundColor = () => {
     body[0].style.background = buildRgbColor();
     colorTextDisplay.innerText = buildRgbColor();
 }
