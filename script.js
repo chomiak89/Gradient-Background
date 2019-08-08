@@ -9,6 +9,10 @@ let primary = document.querySelector("#primary");
 let secondary = document.querySelector("#secondary");
 let body = document.getElementsByTagName("body");
 let colorTextDisplay = document.querySelector("#colorTextDisplay");
+let gradientDirectionSelection = document.querySelector("#gradientDirectionSelection");
+
+//VARIABLES
+let gradientDirection = "to right";
 
 //Create and set the inital values for primary and secondary color variables
 let primaryColorPicked = {r: 73, g: 241, b: 116}; 
@@ -26,6 +30,11 @@ secondary.addEventListener("input", function(){
     secondaryColorPicked = hexToRgb(secondary.value);
     changeBackgroundColor();
 })
+//Event listener for gradient direction
+gradientDirectionSelection.addEventListener("input", () => {
+    gradientDirection = gradientDirectionSelection.value;
+    changeBackgroundColor();
+})
 
 
 //FUNCTIONS =========================================================================================
@@ -41,7 +50,7 @@ const buildSecondary = () => {
 }
 //Builds the entire rgba declaration using buildPrimary() and buildSecondary()
 const buildRgbColor = () => {
-    let pri = `linear-gradient(to right, ${buildPrimary()}, ${buildSecondary()})`;
+    let pri = `linear-gradient(${gradientDirection}, ${buildPrimary()}, ${buildSecondary()})`;
     return pri;
 }
 //Changes the style attribute of body to change the color, alse updates inner text of the h4 to display current values
