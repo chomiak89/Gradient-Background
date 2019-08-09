@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Gradient Selector V.1.1</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" type="text/css" />
+  <title>Gradient Selector V.2.0.0</title>
 </head>
 <body>
-    
-    <div id="wrapper">
-        <h1>Background Gradient Generator</h1>
-        <input type="color" name="primary" id="primary" value="#49f174">
-        <input type="color" name="secondary" id="secondary" value = "#73a5f7">
-        <h3>Current CSS Gradient Background</h3>
-        <h4 id="colorTextDisplay">linear-gradient(to right, rgb(73, 241, 116), rgb(115, 165, 247))</h4>
-        <select name="gradientDirection" id="gradientDirectionSelection">
-            <option value="to right">Left - Right</option>
-            <option value="to bottom">Top - Bottom</option>
-        </select>
-    </div>
-    
+  <div id="wrapper">
+    <h1>Background Gradient Generator</h1>
+    <input type="color" name="primary" id="primary" value="#49f174" />
+    <input type="color" name="secondary" id="secondary" value="#73a5f7" />
+    <h3>Current CSS Gradient Background</h3>
+    <h4 id="colorTextDisplay">
+      linear-gradient(to right, rgb(73, 241, 116), rgb(115, 165, 247))
+    </h4>
+    <select name="gradientDirection" id="gradientDirectionSelection">
+      <option value="to right">Left - Right</option>
+      <option value="to bottom">Top - Bottom</option>
+    </select>
+    <button id="randomColors">Random Colors</button>
+  </div>
 
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
