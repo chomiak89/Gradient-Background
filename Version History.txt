@@ -1,0 +1,9 @@
+V 1.0.0
+-Ability to create a gradient background from left-right using 2 color choices.
+
+V 1.1.0
+-Added the ability to change the gradient direction from left-right to top-bottom.
+
+V 1.2.0
+-Refactored and streamlined the code
+-Added the ability to create a randomized background by generating two random colors.
