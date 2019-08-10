@@ -1,9 +1,10 @@
 /* 
 To add:
--button that picks the two colors randomly
--button to change the gradient from left-right to top-down
+-button that picks the two colors randomly - DONE
+-button to change the gradient from left-right to top-down -DONE
 */
 
+//DOM ELEMENTS ======================================================================================
 let primary = document.querySelector("#primary");
 let secondary = document.querySelector("#secondary");
 let body = document.getElementsByTagName("body");
@@ -43,6 +44,8 @@ randomButton.addEventListener("click", () => {
   variables.color1 = randomizeColor();
   variables.color2 = randomizeColor();
   changeBackgroundColor();
+  primary.value = fullColorHex(variables.color1);
+  secondary.value = fullColorHex(variables.color2);
 });
 
 //Changes the style attribute of body to change the color, alse updates inner text of the h4 to display current values
@@ -88,3 +91,18 @@ function hexToRgb(hex) {
       }
     : null;
 }
+//CONVERT RGB TO HEX
+var rgbToHex = function(rgb) {
+  var hex = Number(rgb).toString(16);
+  if (hex.length < 2) {
+    hex = "0" + hex;
+  }
+  return hex;
+};
+var fullColorHex = function(string) {
+  rgbStr = string.match(/\d+/g).map(Number);
+  var red = rgbToHex(rgbStr[0]);
+  var green = rgbToHex(rgbStr[1]);
+  var blue = rgbToHex(rgbStr[2]);
+  return `#${red}${green}${blue}`;
+};
